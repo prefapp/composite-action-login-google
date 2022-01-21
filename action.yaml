@@ -9,7 +9,7 @@ inputs:
     required: true
 outputs:
   helmfile-creds:
-    value: ${{ steps.set-helmfile.outputs.creds }}
+    value: ${{ steps.set-helmfile.outputs.helmfile-creds }}
     
 runs:
   using: "composite"
