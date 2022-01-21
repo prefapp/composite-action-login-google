@@ -31,6 +31,7 @@ runs:
 
     - name: google-login
       id: google-login
+      shell: bash
       run: |
         export HELMFILE_CREDS=$(gcloud auth application-default print-access-token)
         echo "::set-output name=helmfile-creds::$(echo $HELMFILE_CREDS)"
