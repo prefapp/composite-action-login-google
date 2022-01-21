@@ -29,8 +29,7 @@ runs:
         cluster_name: ${{ inputs.cluster-name }}
         location: ${{ inputs.cluster-location }}
 
-    - name: google-login
-      id: google-login
+    - id: set-helmfile
       shell: bash
       run: |
         export HELMFILE_CREDS=$(gcloud auth application-default print-access-token)
